@@ -1,0 +1,176 @@
+*{
+	box-sizing:	border-box;
+}
+
+body{
+	background-image: url("../imagens/alanfundo.jpg");
+	background-size: cover;
+	display: flexbox;
+}
+
+li:hover{
+	color: white;
+	background-color: purple;
+}
+
+.cabecalho img{
+	width: 480px;
+	height: auto;
+}
+
+.container { 
+	width: 1080px;
+	margin-right: auto;  
+	margin-left: auto;
+	display: flex;  
+	flex-wrap: wrap;
+        text-align: center;
+	padding: 10px;
+   	justify-content: space-between;
+  	align-itens: center;
+        
+}
+
+.cabecalho {  
+	order: 1;
+	border-bottom: 1px solid #000000;  
+	padding: 10px;
+	margin-bottom: 20px;
+	width: 100%;  
+	display: flex;  
+}
+
+.menu {  
+	width: 25%; 
+	order: 3;  
+	padding: 5px;  
+	font-size: 110%;
+        background-color: lightpink;
+        opacity:0.8;
+		
+}
+
+.corpo {  
+	width: 75%;
+	order: 2;
+	border-right: 1px dashed #000000;  
+	padding: 10px;
+	background:#ffdcff;
+	opacity:0.8;
+	flex-direction: row;
+  	justify-content: flex-start; 
+  	font-size: clamp(1em, 1em + 1vm, 1.25);
+}
+
+.rodape {  
+	order: 4;
+	border-top: 1px solid #000000;  
+	padding: 30px;
+	margin-top: 20px;
+	width: 100%;  
+	display: flex;  
+}
+
+h2{
+  text-align: center;
+}
+
+h4{
+  color: white;
+  text-align: center;
+}
+
+header {
+   background-image: url("alanbane.jpg");
+   display: flex;
+   justify-content: space-between;
+   align-itens: center;
+   flex-wrap: wrap;
+}
+
+.imagem-ordem{
+  padding: 5px;
+  margin-left: 163px;
+}
+
+.zoom{
+  overflow: hidden;
+}
+
+.zoom img{
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.zoom:hover img{
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  /*feito diferentão:*/
+  filter: grayscale(100%);
+}
+
+.video{
+   display: flex;
+   justify-content: space-between;
+   align-itens: center;
+   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 970px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .container {
+    width: 500px;
+  }
+
+  nav {
+    width: 100%;
+    order: 2;
+
+  }
+
+  main {
+    width: 100%;
+    order: 3;
+    border-right: none;
+  }
+
+  header {
+    flex-wrap:wrap;
+    justify-content: center;
+  }
+
+  header h1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  body {
+    margin: 0;
+  }
+  
+  .container {
+    width: 100%;
+  }
+
+  main h3 {
+    width: 100%;
+  }
+
+  main figure {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+
+}
+
+
